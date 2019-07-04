@@ -17,7 +17,8 @@
     "jstorage": "~0.4.8",
     "JSON2": "~0.1.0",
     "cheerio": "~0.20.0",
-    "node-uuid": ">=1.4.7"
+    "node-uuid": ">=1.4.7",
+    "snyk": "^1.189.0"
   },
   "providedServices": {
     "browser-plus": {
@@ -36,5 +37,10 @@
     "html",
     "preview",
     "preview-plus"
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
