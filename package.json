@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "atom-space-pen-views": "~2.0.3",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "jquery-ui": "1.10.5",
     "theorist": "~1.0.2",
     "lodash": "~3.10.1",
     "jstorage": "~0.4.8",
     "JSON2": "~0.1.0",
     "cheerio": "~0.20.0",
-    "node-uuid": ">=1.4.7"
+    "node-uuid": ">=1.4.7",
+    "snyk": "^1.316.1"
   },
   "providedServices": {
     "browser-plus": {
@@ -36,5 +37,10 @@
     "html",
     "preview",
     "preview-plus"
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
